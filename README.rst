@@ -9,7 +9,7 @@ SIMULINK repository SOLO Motor Controllers More information about it on `the SOL
 Authors
 =======
 
-SOLO Motor Controller DLL is created by SOLO Motor Controllers team
+SIMULINK repository for SOLO Motor Controllers is created by SOLO Motor Controllers team
 
 
 
