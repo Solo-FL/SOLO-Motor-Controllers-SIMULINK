@@ -5,6 +5,7 @@ SIMULINK repository for SOLO Motor Controllers
 *******
 
 SIMULINK repository SOLO Motor Controllers More information about it on `the SOLO website <https://www.solomotorcontrollers.com/>`_.
+The Hello World tutorial is `here <https://www.solomotorcontrollers.com/blog/solo-simulink-block-hello-world/>`_.
 
 Authors
 =======
