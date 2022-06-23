@@ -10,6 +10,8 @@ The Hello World tutorial is `here <https://www.solomotorcontrollers.com/blog/sol
 The s-function folder contain all the ready to use file for Simulink. The dll-src contain the c++ source file used in order to generete the DLL layer that the s-function will use. 
 In order to generete the DLL from the C++ file is possible to run the .bat file 
 
+- Need Mingw-w64 for run bat file, they call: g++. More info here: https://code.visualstudio.com/docs/cpp/config-mingw
+
 Authors
 =======
 
