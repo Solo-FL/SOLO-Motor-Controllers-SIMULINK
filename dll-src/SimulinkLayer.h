@@ -4,11 +4,8 @@
 #include <tchar.h>
 #include <stdio.h>
 
-#ifdef SOLOLIBRARY_EXPORTS
-#define SOLOLIBRARY_API __declspec(dllexport)
-#else
-#define SOLOLIBRARY_API __declspec(dllimport)
-#endif
+
+#define SOLOLIBRARY_API __declspec(dllexport) //ONLY THIS OPTION
 
 #ifdef __cplusplus
 extern "C"
