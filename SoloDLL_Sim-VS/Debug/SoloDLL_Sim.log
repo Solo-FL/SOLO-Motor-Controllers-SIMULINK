@@ -1,9 +1,0 @@
-﻿  SoloDLL_Sim.cpp
-E:\Rayatin\SOLO\VS Project\SoloDLL_Sim\SoloDLL_Sim.cpp(7,1): warning C4273:  '_serialSetup': inconsistent dll linkage
-E:\Rayatin\SOLO\VS Project\SoloDLL_Sim\SoloDLL_Sim.h(18,23): message :  see previous definition of '_serialSetup'
-E:\Rayatin\SOLO\VS Project\SoloDLL_Sim\SoloDLL_Sim.cpp(12,1): warning C4273:  '_SetCurrentLimit': inconsistent dll linkage
-E:\Rayatin\SOLO\VS Project\SoloDLL_Sim\SoloDLL_Sim.h(20,23): message :  see previous definition of '_SetCurrentLimit'
-E:\Rayatin\SOLO\VS Project\SoloDLL_Sim\SoloDLL_Sim.cpp(17,1): warning C4273:  'GetCurrentLimit': inconsistent dll linkage
-E:\Rayatin\SOLO\VS Project\SoloDLL_Sim\SoloDLL_Sim.h(22,24): message :  see previous definition of 'GetCurrentLimit'
-     Creating library E:\Rayatin\SOLO\VS Project\SoloDLL_Sim\Debug\SoloDLL_Sim.lib and object E:\Rayatin\SOLO\VS Project\SoloDLL_Sim\Debug\SoloDLL_Sim.exp
-  SoloDLL_Sim.vcxproj -> E:\Rayatin\SOLO\VS Project\SoloDLL_Sim\Debug\SoloDLL_Sim.dll
