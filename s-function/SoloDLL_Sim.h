@@ -4,18 +4,15 @@
 #include <tchar.h>
 #include <stdio.h>
 
-#ifdef SOLOLIBRARY_EXPORTS
-#define SOLOLIBRARY_API __declspec(dllexport)
-#else
-#define SOLOLIBRARY_API __declspec(dllimport)
-#endif
+
+#define SOLOLIBRARY_API __declspec(dllexport) //ONLY THIS OPTION
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
 
-	SOLOLIBRARY_API bool _serialSetup(UINT8 soloNum, char* _portName, UINT32 _baudrate, long _millisecondsTimeout, int _packetFailureTrialAttempts);
+	SOLOLIBRARY_API bool _Setup(UINT8 soloNum, UINT8 connectionType, char* _portName, UINT32 _baudrate, long _millisecondsTimeout, int _packetFailureTrialAttempts);
 
 	SOLOLIBRARY_API bool _SetDeviceAddress(UINT8 soloNum, unsigned char deviceAddress, int* error);
 
@@ -101,7 +98,7 @@ extern "C"
 
 	SOLOLIBRARY_API bool _SetSpeedDecelerationValue(UINT8 soloNum, float speedDecelerationValue, int* error);
 
-	SOLOLIBRARY_API bool _SetCanbusBoudrate(UINT8 soloNum, UINT8 canbusBoudrate, int* error);
+	SOLOLIBRARY_API bool _SetCanbusBaudrate(UINT8 soloNum, UINT8 canbusBaudrate, int* error);
 
 	SOLOLIBRARY_API float _GetCurrentLimit(UINT8 soloNum, int* error);
 
@@ -207,7 +204,7 @@ extern "C"
 
 	SOLOLIBRARY_API long  _GetEncoderIndexCounts(UINT8 soloNum, int* error);
 
-	SOLOLIBRARY_API bool _serialIsWorking(UINT8 soloNum, int* error);
+	SOLOLIBRARY_API bool _CommunicationIsWorking(UINT8 soloNum, int* error);
 
 #ifdef __cplusplus
 } // __cplusplus defined.

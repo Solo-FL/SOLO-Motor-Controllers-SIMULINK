@@ -30,7 +30,7 @@
  * Start function
  *
  */
-void serialSetup_Start_wrapper(void **pW)
+void Setup_Start_wrapper(void **pW)
 {
 /* %%%-SFUNWIZ_wrapper_Start_Changes_BEGIN --- EDIT HERE TO _END */
 /*
@@ -38,14 +38,15 @@ void serialSetup_Start_wrapper(void **pW)
  */
     
 pW[0] = LoadLibrary("SoloDLL_Sim.dll");
-pW[1] = GetProcAddress(pW[0], "_serialSetup");
+pW[1] = GetProcAddress(pW[0], "_Setup");
 /* %%%-SFUNWIZ_wrapper_Start_Changes_END --- EDIT HERE TO _BEGIN */
 }
 /*
  * Output function
  *
  */
-void serialSetup_Outputs_wrapper(const uint8_T *Address,
+void Setup_Outputs_wrapper(const uint8_T *Address,
+			const uint8_T *ConnectionType,
 			const uint8_T *COM_Port,
 			const uint32_T *Baud_Rate,
 			const real_T *Timeout,
@@ -62,9 +63,9 @@ void serialSetup_Outputs_wrapper(const uint8_T *Address,
       y1[0].im = u1[0].im;
  */
   
-boolean (*func)(uint8_T, uint8_T *, uint32_T, real_T, int32_T);
+boolean (*func)(uint8_T, uint8_T, uint8_T *, uint32_T, real_T, int32_T);
 func = pW[1];
-Result[0] = func(Address[0], COM_Port, Baud_Rate[0], Timeout[0], Trials_on_Failure[0]);
+Result[0] = func(Address[0], ConnectionType[0], COM_Port, Baud_Rate[0], Timeout[0], Trials_on_Failure[0]);
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */
 }
 
@@ -72,7 +73,7 @@ Result[0] = func(Address[0], COM_Port, Baud_Rate[0], Timeout[0], Trials_on_Failu
  * Terminate function
  *
  */
-void serialSetup_Terminate_wrapper(void **pW)
+void Setup_Terminate_wrapper(void **pW)
 {
 /* %%%-SFUNWIZ_wrapper_Terminate_Changes_BEGIN --- EDIT HERE TO _END */
 /*
